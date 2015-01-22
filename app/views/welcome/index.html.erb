@@ -3,8 +3,18 @@
   	<h4>Campus Data</h4>
   	<ul>
   		<% @campus.each do |campu| %>
- 	<li><%= link_to campu.campus_name, campu_path(campu) %></li>
- 	<li><%= link_to campu.location, campu_path(campu) %></li>
+
+      <ul class="left">
+        <li><h5>Campus</h5></li>
+ 	      <li><%= link_to campu.campus_name, campu_path(campu) %></li>
+      </ul>
+
+      <ul class="right">
+        <li><h5>Location</h5></li>
+ 	      <li><%= link_to campu.location, campu_path(campu) %></li>
+      </ul>
+
+
  	<% end %>
  	</ul>
   
